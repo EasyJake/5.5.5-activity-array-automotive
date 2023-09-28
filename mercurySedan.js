@@ -32,4 +32,4 @@ console.log(v.make)
 
 
 
-//Create at least two new instances of the Car class and test them here:
+//Create at least two new instances of the Car class and test them here: test
