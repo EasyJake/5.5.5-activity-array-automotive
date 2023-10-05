@@ -21,6 +21,7 @@ class Vehicle {
             return this.started = false;
         }
     }
+
     accelerate() {
         if (this.started) {
             if (this.fuel > 0) {
@@ -31,9 +32,10 @@ class Vehicle {
                 this.stop();
             }
         } else {
-            alert("You need to start the engine first.");
+            console.log("You need to start the engine first."); // Replaced alert with console.log
         }
     }
+
     decelerate() {
         if (this.started) {
             if (this.fuel > 0) {
@@ -49,18 +51,20 @@ class Vehicle {
                 this.stop();
             }
         } else {
-            alert("You need to start the engine first.");
+            console.log("You need to start the engine first."); // Replaced alert with console.log
         }
     }
+
     stop() {
         this.started = false;
     }
 
     drive() {
-        this.accelerate(); // fixed missing "this"
+        this.accelerate();
     }
+
     brake() {
-        this.decelerate(); // fixed missing "this"
+        this.decelerate();
     }
 
     autoPark() {
@@ -84,5 +88,4 @@ class Vehicle {
     }
 }
 
-// Attaching the Vehicle class to the global window object for use in other scripts
-window.Vehicle = Vehicle;
+module.exports = Vehicle;
